@@ -6,22 +6,23 @@ import About from "./About";
 
 function App() {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">/About</Link>
-        </li>
-      </ul>
-    </nav>  
-    
+    <Router>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link> {/* Cleaned text */}
+          </li>
+        </ul>
+      </nav>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
-   </Routes>
+    </Router>
   );
 }
 
